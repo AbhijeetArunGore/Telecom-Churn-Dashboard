@@ -21,7 +21,8 @@ st.markdown("Analyze customer behavior and predict churn probability")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\abhis\Downloads\WA_Fn-UseC_-Telco-Customer-Churn.csv")
+    df = pd.read_csv("WA_Fn-UseC_-Telco-Customer-Churn.csv")
+
     
     # Preprocessing
     df['TotalCharges'] = pd.to_numeric(df['TotalCharges'], errors='coerce')
